@@ -1,71 +1,89 @@
-# Getting Started with Create React App
+# 🌍 Translator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application de traduction facile à utiliser qui permet aux utilisateurs de traduire du texte entre plusieurs langues. Avec une interface simple et intuitive, l'application offre des fonctionnalités pratiques telles que la lecture audio et la copie rapide du texte.
 
-## Available Scripts
+## 🎨 Aperçu
 
-In the project directory, you can run:
+L'application **Translator** permet de traduire du texte instantanément entre différentes langues. Elle propose également des options pour lire le texte traduit à haute voix et copier facilement le texte dans le presse-papiers.
 
-### `npm start`
+![Translator Screenshot](https://your-screenshot-url.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Fonctionnalités
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Traduction instantanée** : Traduisez du texte entre plusieurs langues en un seul clic.
+- **Échange de langues** : Inversez facilement la langue source et la langue cible.
+- **Lecture audio** : Écoutez le texte d'origine ou traduit avec la synthèse vocale.
+- **Copie rapide** : Copiez le texte d'origine ou traduit en un clic.
+- **Sélection des langues** : Choisissez parmi un large éventail de langues.
+- **Interface utilisateur fluide** : Design simple et épuré, adapté à tous les utilisateurs.
 
-### `npm test`
+## 🛠️ Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React.js** : Librairie JavaScript pour la création de l'interface utilisateur.
+- **CSS3** : Pour la mise en page et le style de l'application.
+- **MyMemory Translated API** : Utilisée pour obtenir les traductions en temps réel.
+- **Web Speech API** : Pour la synthèse vocale (lecture audio).
 
-### `npm run build`
+## 📦 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Cloner le projet :**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/votre-utilisateur/translator-app.git
+   cd translator-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Installer les dépendances :**
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Démarrer l'application :**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Accéder à l'application :**
+   Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📖 Utilisation
 
-## Learn More
+- **Saisie du texte** : Saisissez le texte à traduire dans le champ de texte de gauche.
+- **Sélection des langues** : Choisissez la langue source et la langue cible dans les menus déroulants.
+- **Traduction** : Cliquez sur "Translate Text" pour obtenir la traduction.
+- **Écoute du texte** : Cliquez sur l'icône du haut-parleur pour écouter le texte d'origine ou traduit.
+- **Copie du texte** : Utilisez l'icône de copie pour copier le texte dans le presse-papiers.
+- **Échange des langues** : Inversez la langue source et la langue cible en un clic grâce à l'icône d'échange.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🗂 Structure du projet
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+/public
+  index.html              # Page HTML principale
+/src
+  /components             # Composants React (ex. : Countries.jsx)
+  App.js                  # Composant principal de l'application
+  App.css                 # Style de l'application
+  index.js                # Point d'entrée de React
+  index.css               # Style des tout les composants
+```
 
-### Code Splitting
+## 🎥 Démo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Regardez une démo en direct de l'application [ici](https://your-demo-url.com) !
 
-### Analyzing the Bundle Size
+## 🤝 Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer cette application ou ajouter de nouvelles fonctionnalités, veuillez suivre ces étapes :
 
-### Making a Progressive Web App
+1. Fork le projet.
+2. Créez une nouvelle branche (`git checkout -b feature/new-feature`).
+3. Committez vos changements (`git commit -am 'Ajout d'une nouvelle fonctionnalité'`).
+4. Poussez sur la branche (`git push origin feature/new-feature`).
+5. Créez une Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 Licence
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# translator
+Ce projet est sous licence **MIT**. Consultez le fichier [LICENSE](./LICENSE) pour plus d'informations.
