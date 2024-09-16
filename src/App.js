@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './App.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 import Countries from "./Countries.jsx";
 
 const App = () => {
@@ -37,6 +36,16 @@ const App = () => {
     navigator.clipboard.writeText(text);
   };
 
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setFromText(text);
+    } catch (error) {
+      console.error("Error pasting text", error);
+    }
+  };
+  
+
   const handleSpeak = (text, lang) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang;
@@ -69,8 +78,8 @@ const App = () => {
                 className="fas fa-volume-up"
               ></i>
               <i
-                onClick={() => handleCopy(fromText)}
-                className="fas fa-copy"
+                onClick={handlePaste}  // Appel de la nouvelle fonction de collage
+                className="fas fa-paste"  // Icône de collage (pâte)
               ></i>
             </div>
             <select
