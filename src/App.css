@@ -1,6 +1,22 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Variables pour les couleurs */
+:root {
+  --primary-bg-color: #06283D;
+  --container-bg-color: #fff;
+  --text-color: #333;
+  --border-color: #ccc;
+  --icon-color: #adadad;
+  --highlight-color: #999;
+  --scrollbar-bg: #ddd;
+  --button-bg-color: #06283D;
+  --button-text-color: #fff;
+  --placeholder-color: #b7b6b6;
+  --shadow-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,37 +24,38 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Style global */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
   min-height: 100vh;
-  background: #06283D;
+  background: var(--primary-bg-color);
 }
 
 .container {
   max-width: 690px;
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background: var(--container-bg-color);
   border-radius: 7px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 .wrapper {
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
 }
 
 .wrapper .text-input {
   display: flex;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .text-input .to-text {
-  border-radius: 0px;
-  border-left: 1px solid #ccc;
+  border-radius: 0;
+  border-left: 1px solid var(--border-color);
 }
 
 .text-input textarea {
@@ -54,9 +71,10 @@ body {
 }
 
 .text-input textarea::placeholder {
-  color: #b7b6b6;
+  color: var(--placeholder-color);
 }
 
+/* Contrôles et icônes */
 .controls,
 li,
 .icons,
@@ -77,7 +95,7 @@ li,
 
 .controls .row .icons i {
   width: 50px;
-  color: #adadad;
+  color: var(--icon-color);
   font-size: 14px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -86,16 +104,16 @@ li,
 
 .controls .row.from .icons {
   padding-right: 15px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--border-color);
 }
 
 .controls .row.to .icons {
   padding-left: 15px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--border-color);
 }
 
 .controls .row select {
-  color: #333;
+  color: var(--text-color);
   border: none;
   outline: none;
   font-size: 18px;
@@ -103,32 +121,8 @@ li,
   padding-left: 5px;
 }
 
-.text-input textarea::-webkit-scrollbar {
-  width: 4px;
-}
-
-.controls .row select::-webkit-scrollbar {
-  width: 8px;
-}
-
-.text-input textarea::-webkit-scrollbar-track,
-.controls .row select::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-.text-input textarea::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 8px;
-}
-
-.controls .row select::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
-}
-
 .controls .exchange {
-  color: #adadad;
+  color: var(--icon-color);
   cursor: pointer;
   font-size: 16px;
   transition: transform 0.2s ease;
@@ -138,19 +132,43 @@ li,
   transform: scale(0.9);
 }
 
+/* Scrollbars */
+.text-input textarea::-webkit-scrollbar,
+.controls .row select::-webkit-scrollbar {
+  width: 4px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: var(--container-bg-color);
+}
+
+.text-input textarea::-webkit-scrollbar-thumb,
+.controls .row select::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  border-right: 2px solid var(--container-bg-color);
+}
+
+/* Bouton principal */
 .container button {
   width: 100%;
   padding: 14px;
   outline: none;
   border: none;
-  color: #fff;
+  color: var(--button-text-color);
   cursor: pointer;
   margin-top: 20px;
   font-size: 17px;
   border-radius: 5px;
-  background: #06283D;
+  background: var(--button-bg-color);
 }
 
+/* Media Queries pour l'adaptation mobile */
 @media (max-width: 660px) {
   .container {
     padding: 20px;
@@ -161,8 +179,8 @@ li,
   }
 
   .text-input .to-text {
-    border-left: 0px;
-    border-top: 1px solid #ccc;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
   }
 
   .text-input textarea {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
-import Countries from "./Countries.jsx";
+import Countries from "./components/Countries.jsx";
 
 const App = () => {
   const [fromText, setFromText] = useState("");
@@ -78,8 +78,8 @@ const App = () => {
                 className="fas fa-volume-up"
               ></i>
               <i
-                onClick={handlePaste}  // Appel de la nouvelle fonction de collage
-                className="fas fa-paste"  // Icône de collage (pâte)
+                onClick={handlePaste}
+                className="fas fa-paste"
               ></i>
             </div>
             <select
