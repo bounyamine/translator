@@ -6,7 +6,7 @@ Une application de traduction facile à utiliser qui permet aux utilisateurs de 
 
 L'application **Translator** permet de traduire du texte instantanément entre différentes langues. Elle propose également des options pour lire le texte traduit à haute voix et copier facilement le texte dans le presse-papiers.
 
-![Translator Screenshot](https://your-screenshot-url.com)
+![Translator Screenshot](https://github.com/bounyamine/translator/blob/main/public/screenshots/screen.png)
 
 ## 🚀 Fonctionnalités
 
